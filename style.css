@@ -1,0 +1,262 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 15px 30px;
+}
+
+.navbar .logo a {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f39c12;
+}
+.hamburger {
+  display: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    text-align: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+.calculate{
+  color: black;
+  padding: 15px ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  width: 200px;
+  height: 320px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.5em;
+  color: #333;
+  margin: 0;
+}
+
+.card-description {
+  font-size: 1em;
+  color: #666;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+.card-btn {
+  padding: 10px 15px;
+  font-size: 1em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-btn:hover {
+  background-color: #0056b3;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.selected {
+  border: 3px solid #f39c12;
+  background-color: rgba(243, 156, 18, 0.2);
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+}
+.selected-list {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  text-align: left;
+}
+
+.selected-list h2 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+}
+.selected-list div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  border-left: 5px solid #f39c12;
+  transition: background 0.3s ease;
+}
+
+
+.selected-list div:hover {
+  background: #ffeaa7;
+}
+.selected-list input {
+  width: 60px;
+  padding: 5px;
+  font-size: 16px;
+  border: 2px solid #f39c12;
+  border-radius: 5px;
+  text-align: center;
+}
+h2#totalProtein {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-top: 15px;
+  padding: 10px;
+  background: #4a90e2;
+  color: white;
+  border-radius: 8px;
+  display: inline-block;
+}
+#totalprotein{
+  background-color: black;
+  color: white;
+}
+.foot{
+  position: sticky;
+  bottom: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .card {
+    //width: 150px;
+    //height: 260px;
+    width:110px;
+    height: 220px ;
+  }
+
+  .card-img {
+    height: 120px;
+  }
+
+  .card-content {
+    padding: 10px;
+  }
+
+  .card-title {
+    font-size: 1.2em;
+  }
+
+  .card-description {
+    font-size: 0.9em;
+  }
+
+  .calculate h1 {
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .selected-list {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .selected-list div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .selected-list input {
+    width: 100%;
+  }
+
+  h2#totalProtein {
+    font-size: 20px;
+    padding: 8px;
+  }
+}
+

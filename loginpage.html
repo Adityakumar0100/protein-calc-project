@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <script>
+      function redirectToDashboard(event) {
+        event.preventDefault(); 
+        window.location.href = "dashboard.html"; 
+      }
+    </script>
+    <link rel="stylesheet" href="logincss.css">
+  </head>
+  <body>
+    
+    <div>
+    <p>
+        <h1 class="heading"> We Work, We Grind</h1>
+    </p>
+     </div>
+     
+    <form onsubmit="redirectToDashboard(event)">
+      <div>
+        <label for="name" style="color: rgb(193, 182, 182);">Name</label>
+        <input id="name" type="text" placeholder="Enter Name" required />
+      </div>
+
+      
+      <div>
+        <label for="ph" style="color: rgb(193, 182, 182);">Phone</label>
+        <input id="ph" type="tel" placeholder="Enter Phone" required />
+      </div>
+
+    
+      <div>
+        <label for="email" style="color: rgb(193, 182, 182);">Email</label>
+        <input id="email" type="email" placeholder="Enter Email" required />
+      </div>
+
+      
+      <div>
+        <label for="password"style="color: white;">Password</label>
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter Password"
+          required
+        />
+      </div>
+
+      
+      <div>
+        <label for="dob" style="color: rgb(193, 182, 182);">Date of Birth</label>
+        <input id="dob" type="date" required />
+      </div>
+
+      
+      <div>
+        <label for="gender" style="color: rgb(94, 91, 91);">Gender</label>
+        <select id="gender" required>
+          <option value="" disabled selected style="color: rgb(94, 92, 92);">Select Gender</option>
+          <option value="male" style="color: rgb(94, 91, 91);">Male</option>
+          <option value="female" style="color:rgb(94, 91, 91);">Female</option>
+          <option value="other" style="color: rgb(94, 91, 91);">Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="height" style="color: rgb(193, 182, 182);">Height (cm):</label>
+    <input type="number" id="height" name="height" required>
+
+    <label for="weight" style="color: rgb(193, 182, 182);">Weight (kg):</label>
+    <input type="number" id="weight" name="weight" required>
+      </div>
+
+      
+      <div>
+        <p style="color: rgb(193, 182, 182);">Activity level</p>
+        <input id="basic" type="radio" name="subscription" value="basic" />
+        <label for="basic" style="color: rgb(193, 182, 182);">Sedentry</label>
+
+        <input id="premium" type="radio" name="subscription" value="premium" />
+        <label for="premium" style="color:rgb(193, 182, 182);">Moderate</label>
+
+        <input id="vip" type="radio" name="subscription" value="vip" />
+        <label for="vip" style="color: rgb(193, 182, 182);">Active</label>
+      </div>
+
+      
+      <div>
+        <input id="terms" type="checkbox" required />
+        <label for="terms" style="color:rgb(193, 182, 182);">I agree to the terms and conditions</label>
+      </div>
+
+      
+
+      <button type="submit">Login</button>
+    </form>
+
+
+   
+</body>
+</html>
